@@ -1,5 +1,14 @@
 package main;
 
+import core.RockRollRadio;
+import person.Artista;
+import person.Invitado;
+import person.Locutor;
+import program.Cancion;
+import program.Emision;
+import program.Programa;
+import utils.Genero;
+
 /**
  *
  * @author Eduardo Angulo
@@ -110,20 +119,20 @@ public class Main {
         radio.getPrograma(3).getLastEmision().addCancion(radio.getCancion(0));
         radio.getPrograma(3).getLastEmision().addCancion(radio.getCancion(1));
 
-        for(Artista a: radio.getArtistas()) {
+        for(Artista artista: radio.getArtistas()) {
             System.out.println(
-                "El programa que más ha puesto canciones del artista "
-                + a.getNombre()
+                "El programa que mas ha puesto canciones del artista "
+                + artista.getNombre()
                 + " es "
-                + radio.getProgramaConMasCancionesDeArtista(a).getNombre()
+                + radio.getProgramaConMasCancionesDeArtista(artista).getNombre()
             );
         }
     }
     
     /* RESULTADOS
-    El programa que más ha puesto canciones del artista Muse es Great Rock
-    El programa que más ha puesto canciones del artista Ludwig van Beethoven es De todito
-    El programa que más ha puesto canciones del artista Carlos Vives es Pa la Tropicalle
+    El programa que mas ha puesto canciones del artista Muse es Great Rock
+    El programa que mas ha puesto canciones del artista Ludwig van Beethoven es De todito
+    El programa que mas ha puesto canciones del artista Carlos Vives es Pa la Tropicalle
     */
     
 }
